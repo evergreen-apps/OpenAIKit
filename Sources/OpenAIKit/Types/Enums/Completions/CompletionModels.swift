@@ -48,6 +48,9 @@ public enum CompletionModels: String, CustomStringConvertible {
     /// Capable of very simple tasks, usually the fastest model in the GPT-3 series, and lowest cost.
     case ada
 
+    /// New completion model
+    case gpt35turboInstruct = "gpt-3.5-turbo-instruct"
+
     /// The maximum tokens the models can read
     public var maxTokens: [String : Int] {
         [
@@ -57,7 +60,8 @@ public enum CompletionModels: String, CustomStringConvertible {
             "davinci": 2049,
             "curie": 2049,
             "babbage": 2049,
-            "ada": 2049
+            "ada": 2049,
+            "gpt35turboInstruct": 2049
         ]
     }
 
